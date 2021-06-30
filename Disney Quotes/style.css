@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Noto Sans', sans-serif;
+}
+h1{
+    font-family: 'Calligraffitti', cursive;
+    text-align: center;
+    font-size: 5em;
+    margin: 40px 0 20px 0;
+}
+section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: rgba(187, 187, 187, 0.1);
+    padding: 80px;
+}
+.quoteCard{
+    width: 300px;
+    height: auto;
+    background-color: white;
+    border: 1px solid rgba(187, 187, 187, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 1px rgb(202, 201, 201);
+    position: relative;
+}
+.by{
+    font-family: 'Calligraffitti', cursive;
+    color: grey;
+    font-weight: 700;
+    position: absolute;
+    bottom: 2px;
+}
