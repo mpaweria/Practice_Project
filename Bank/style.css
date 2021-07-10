@@ -1,0 +1,110 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Otomanopee One', sans-serif;
+}
+section{
+    height: 100vh;
+}
+nav{
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin: 20px 30px; */
+    padding: 20px 30px ;
+    width: 100vw;
+    background: rgba(36, 36, 36, 0.5);
+    z-index: 1;
+}
+nav a{
+    color: #fff;
+    margin-left: 10px;
+    z-index: 10;
+}
+#home{
+    background-image: url("images/home.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+#bankName{
+    position: absolute;
+    top: 50%;
+    left:70%;
+    color: white;
+    text-align: center;
+}
+#serviceHeading{
+    font-size: 2em;
+}
+#services img{
+    width: 300px;
+    height: 200px;
+}
+#serviceContent{
+    padding-top: 100px;
+    text-align: center;
+
+}
+#serviceCards{
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    z-index: 1;
+}
+#serviceCards div a{
+    color: black;
+}
+/* #black{
+    background-color: black;
+    position: relative;
+    height: 400px;
+    bottom: 0;
+    z-index: -1;
+} */
+#about{
+    height: 100vh;
+    background-color: black;
+}
+#about div{
+    padding-top: 100px;
+    color: white;
+    text-align: center;
+}
+#about div h1{
+    font-size: 2em;
+}
+#contact{
+    position: relative;
+    z-index: -1;
+}
+#contactDiv{
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+}
+#contact img{
+    width: 500px;
+    margin-top: 15%;
+    margin-left: 80px;
+}
+#address{
+    padding-right: 300px;
+}
+footer{
+    position: absolute;
+    padding: 10px 20px;
+    bottom: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+footer p{
+    padding: 0 5px;
+    font-size: 8px;
+    color: rgba(134, 133, 133, 0.6);
+}
