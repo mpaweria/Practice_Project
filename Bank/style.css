@@ -32,11 +32,19 @@ nav a{
     background-size: cover; 
 }
 #bankName{
+    font-size: 2em;
     position: absolute;
-    top: 50%;
+    top: 47%;
     left:70%;
     color: white;
     text-align: center;
+}
+button{
+    padding: 5px 10px;
+}
+#services{
+    position: relative;
+    z-index: 0;
 }
 #serviceHeading{
     font-size: 2em;
@@ -46,7 +54,7 @@ nav a{
     height: 200px;
 }
 #serviceContent{
-    padding-top: 100px;
+    padding-top: 120px;
     text-align: center;
 
 }
@@ -54,25 +62,34 @@ nav a{
     margin-top: 80px;
     display: flex;
     justify-content: space-evenly;
-    z-index: 1;
+}
+.card{
+    width: 300px;
+    box-shadow: 1px 1px 1px 1px gray;
 }
 #serviceCards div a{
+    display: block;
+    /* margin-top: 10px; */
+    padding: 10px 20px;
+    background-color: white;
     color: black;
 }
-/* #black{
+.black{
     background-color: black;
-    position: relative;
-    height: 400px;
+    position: absolute;
+    height: 40vh;
     bottom: 0;
     z-index: -1;
-} */
+    width: 100%;
+}
 #about{
-    height: 100vh;
-    background-color: black;
+    /* height: 100vh; */
+    /* background-color: white; */
+    position: relative;
 }
 #about div{
     padding-top: 100px;
-    color: white;
+    color: black;
     text-align: center;
 }
 #about div h1{
@@ -89,11 +106,30 @@ nav a{
 }
 #contact img{
     width: 500px;
-    margin-top: 15%;
+    padding-top: 5%;
     margin-left: 80px;
 }
+#contactHeading{
+    font-size: 2em;
+    padding-top: 100px;
+    text-align: center;
+}
 #address{
+    padding-top: 40px;
     padding-right: 300px;
+    align-items: center;
+    line-height: 80px;
+}
+#adWhite{
+    z-index: 1;
+    color: white;
+}
+#address i{
+    font-size: 40px;
+    opacity: 0.6;
+    padding: 10px;
+    position: relative;
+    top: 10px;
 }
 footer{
     position: absolute;
