@@ -1,0 +1,58 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.image {
+    height: 200px;
+    width: 200px;
+    background-image: url('https://source.unsplash.com/nKC772R_qog');
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.image::before,
+.image::after {
+    --scale: 0;
+    --arrowSize: 10px;
+    --tooltipColor: #333;
+
+    position: absolute;
+    top: -.25rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(var(--translateY, 0)) scale(var(--scale));
+    transition: 500ms transform;
+    transform-origin: bottom center;
+}
+.image::before {
+    --translateY: calc(-100% - var(--arrowSize));
+
+    content: attr(data-tooltip);    
+    text-align: center;
+    background-color: var(--tooltipColor);
+    color: white;
+    border-radius: .7rem;
+    padding: 10px;
+    width: max-content;
+    max-width: 100%;
+    font-size: 2.5em;
+}
+.image::after{
+    --translateY: calc(-1*var(--arrowSize));
+
+    content: '';
+    border: var(--arrowSize) solid transparent;
+    border-top-color: var(--tooltipColor);
+    transform-origin: top center;
+}
+.image:hover:before,
+.image:hover:after{
+    --scale:1;
+}
