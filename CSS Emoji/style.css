@@ -1,0 +1,105 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #bdbdbd;
+}
+.container {
+    --emojiSize: 150px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+}
+.emoji {
+    background-color: #ffc83d;
+    width: var(--emojiSize);
+    height: var(--emojiSize);
+    border-radius: 50%;
+    margin: 20px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+.eyes {
+    position: absolute;
+    top: calc(var(--emojiSize)*.25);
+    left: calc(var(--emojiSize)*.5);
+}
+.eye {
+    position: absolute;
+    width: calc(var(--emojiSize)*.075);
+    height: calc(var(--emojiSize)*.15);
+    background-color: black;
+    border-radius: 50%;
+}
+.eyeLeft {
+    left: calc(var(--emojiSize)*-.2);
+}
+.eyeRight {
+    right: calc(var(--emojiSize)*-.2);
+}
+.smile {
+    --mouthHeight: calc(var(--emojiSize)*.3);
+
+    position: absolute;
+    background-color: black;
+    width: calc(var(--emojiSize)*.6);
+    height: var(--mouthHeight);
+    bottom: calc(var(--emojiSize)*.15);
+    left: calc(var(--emojiSize)*.5);
+    transform: translate(-50%);
+    border-radius: 5% 5% var(--mouthHeight) var(--mouthHeight);
+}
+.openMouth {
+    position: absolute;
+    width: calc(var(--emojiSize)*.2);
+    height: calc(var(--emojiSize)*.25);
+    bottom: calc(var(--emojiSize)*.2);
+    left: calc(var(--emojiSize)*.5);
+    transform: translate(-50%);
+    background-color: black;
+    border-radius: 50%;
+}
+.mask{
+    position: absolute;
+    width: calc(var(--emojiSize)*.5);
+    height: calc(var(--emojiSize)*.3);
+    background-color: white;
+    bottom: calc(var(--emojiSize)*.2);
+    left: calc(var(--emojiSize)*.25);
+    transform: none;
+    border: calc(var(--emojiSize)*.02) solid #999;
+    border-radius: 10%;
+}
+.strap{
+    position: absolute;
+    border: calc(var(--emojiSize)*.02) solid #999;
+    background-color: white;
+    width: calc(var(--emojiSize)*.5);
+    height: calc(var(--emojiSize)*.1);
+    z-index: -2;
+}
+.strap1 {
+    transform: rotate(20deg);
+    top: calc(var(--emojiSize)*-.05);
+    left: calc(var(--emojiSize)*-.4);
+}
+.strap2{
+    transform: rotate(-20deg);
+    top: calc(var(--emojiSize)*-.05);
+    right: calc(var(--emojiSize)*-.4);
+}
+.strap3{
+    transform: rotate(-150deg);
+    bottom: calc(var(--emojiSize)*-.1);
+    right: calc(var(--emojiSize)*-.4);
+}
+.strap4{
+    transform: rotate(150deg);
+    bottom: calc(var(--emojiSize)*-.1);
+    left: calc(var(--emojiSize)*-.4);
+}
