@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+* {
+    font-family: Raleway;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #DFDFDF;
+}
+.checkboxContainer{
+    display: flex;
+    align-items: center;
+}
+.checkboxContainer label{
+    cursor: pointer;
+    display: flex;
+    font-size: 25px;
+}
+.checkboxContainer input[type="checkbox"] {
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+}
+.checkboxContainer label::before{
+    content: '';
+    height: 1em;
+    width: 1em;
+    border: 0.05em solid black;
+    border-radius: .15em;
+    margin-right: .5em;
+}
+.checkboxContainer label:hover::before,
+.checkboxContainer input[type="checkbox"]:hover +label::before{
+    background-color: #35E07D;
+}
+.checkboxContainer input[type="checkbox"]:focus +label::before{
+    box-shadow: 0 0 20px black;
+}
+.checkboxContainer input[type="checkbox"]:checked +label::before{
+    content: '\002714';
+    background-color: #27AE60;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
