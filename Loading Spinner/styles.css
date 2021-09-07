@@ -1,0 +1,61 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #b1b0b0;
+}
+.spinner{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.spinnerSector{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 15px solid transparent;         /* to get the sharp border top */
+    mix-blend-mode: overlay;                /* for colors to blend in and make new colors */
+}
+.spinnerRed {
+    border-top: 15px solid lightcoral;
+    animation: rotate 2s ease-in infinite;
+}
+.spinnerBlue {
+    border-top: 15px solid lightblue;
+    animation: rotate 2s ease-out infinite;
+}
+.spinnerGreen {
+    border-top: 15px solid lightgreen;
+    animation: rotate 1.5s ease-in-out infinite;
+}
+.spinnerText {
+    font-size: 2em;
+    animation: fadeIn 3s ease-in-out infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0);}
+    to { transform: rotate(360deg);}
+}
+@keyframes fadeIn {
+    0%, 100% {
+        opacity: 1;
+    }
+    25%, 75% {
+        opacity: .5;
+    }
+    50% {
+        opacity: .1;
+    }
+}
