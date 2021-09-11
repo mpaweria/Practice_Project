@@ -1,0 +1,78 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --accent-color: #641BFF;
+    --heading-font: 'Lato', sans-serif;
+    --body-font: 'Poppins', sans-serif;
+}
+body {
+    background-color: #F8F9FB;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--body-font);
+}
+.priceSection {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    width: 100%;
+    margin: 1rem;
+}
+.priceColumn {
+    background-color: white;
+    box-shadow: 0 7px 30px rgba(52, 31, 97, 0.1);
+    padding: 2rem;
+    flex-grow: 1;
+    flex-basis: 0;
+    max-width: 267px;
+    border-radius: 8px;
+}
+.priceColumn.popular {
+    background-color: var(--accent-color);
+    color: white;
+    box-shadow: 0 7px 30px rgba(52, 31, 135, 0.3);
+    margin-top: -1.5rem;
+    padding-top: 3.5rem;
+    margin-bottom: -1.5rem;
+    padding-bottom: 3.5rem;
+}
+.priceColumn:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.priceColumn:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.priceHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--heading-font);
+    font-weight: bold;
+}
+.price {
+    display: flex;
+    font-size: 3.5rem;
+}
+.dollar {
+    font-size: 1rem;
+    margin-top: .5rem;
+}
+.month {
+    font-size: .75rem;
+    align-self: flex-end;
+    margin-bottom: .6rem;
+}
+.planName {
+    font-size: .9rem;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
