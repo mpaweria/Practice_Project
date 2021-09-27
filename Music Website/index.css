@@ -1,0 +1,76 @@
+.homeSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-grow: 1;
+}
+.homeSection .imgWrapper {
+    flex-grow: 1;
+    flex-direction: column;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-end;
+}
+.homeSection .ladyImage {
+    background-image: url("images/landing-page-girl.png");
+    flex-grow: 1;
+    max-height: 70vh;
+    min-width: 30vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+}
+.homeSection .cta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 1rem;
+    align-self: center;
+}
+@media (max-width: 900px)
+{
+    .homeSection .imgWrapper {
+        display: none;
+    }
+    .homeSection {
+        justify-content: center;
+    }
+}
+.circle1 {
+    position: absolute;
+    background-color: rgba(188, 58, 128, .1);
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    bottom: 2vw;
+    left: 2vw;
+    z-index: -1;
+}
+.circle2 {
+    position: absolute;
+    background-color: rgb(52, 87, 178, .1);
+    width: 25vw;
+    height: 25vw;
+    border-radius: 50%;
+    top: 15vh   ;
+    left: 30vw;
+    z-index: -1;
+}
+.circle3 {
+    position: absolute;
+    width: 45vw;
+    height: 45vw;
+    border-radius: 50%;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+.circle3::before {
+    position: absolute;
+    content: '';
+    transform: translate(40%, 40%);
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background-color: rgb(52, 87, 178, .1);
+}
