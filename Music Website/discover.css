@@ -1,0 +1,42 @@
+.discoverSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+}
+.discoverSection .coverImage {
+    width: 30vw;
+    height: auto;
+    max-width: 350px;
+    margin-left: 2.5rem;
+}
+.iconSection {
+    display: flex;
+}
+.icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    margin: .5rem;
+    padding: .75rem;
+    margin-bottom: 2rem;
+    background-color: #202027;
+}
+.icon img {
+    width: 40px;
+}
+@media (max-width: 800px)
+{
+    .discoverSection {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .discoverSection .coverImage {
+        margin-top: 2rem;
+        height: 50vh;
+        width: auto;
+    }
+}

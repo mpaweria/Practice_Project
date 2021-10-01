@@ -58,9 +58,9 @@
 }
 .circle3 {
     position: absolute;
+    overflow: hidden;
     width: 45vw;
     height: 45vw;
-    border-radius: 50%;
     bottom: 0;
     right: 0;
     z-index: -1;

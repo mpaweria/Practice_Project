@@ -27,32 +27,47 @@ body{
 .brandName {
     margin-left: 1rem;
 }
-.mainNav ul{
+.mainNav ul, .footerNav ul{
     display: flex;
     align-items: center;
     margin: 0;
     padding: 0;
     list-style: none;
 }
-.mainNav ul a {
+.mainNav ul a, .footerNav ul a {
     text-decoration: none;
     color: inherit;
     padding: 1rem;
 }
-.mainNav ul a:hover {
+.mainNav ul a:hover, .footerNav ul a:hover {
     color: #adadad;
 }
-.mainHeader {
+.mainHeader, .mainFooter {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.mainHeader {
     height: 140px;
+}
+.mainFooter {
+    height: 70px;
+    background-color: #202027;
+    font-weight: bold;
+}
+.mainFooter .container {
+    display: flex;
+    justify-content: space-between;
+}
+.social img{
+    width: 1em;
+    margin-right: .25rem;
 }
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 40px;
-    /* flex-grow: 1; */
+    flex-grow: 1;
 }
 .title {
     font-weight: 500;
@@ -71,5 +86,14 @@ body{
     text-decoration: none;
     background-color: #1762A7;
     border-radius: .5rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
     padding: .75rem 1.5rem;
+}
+.btn:hover {
+    background-color: #2180d8;
+}
+.btn:focus {
+    background-color: #2796ff;
 }
