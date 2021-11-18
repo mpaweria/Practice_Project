@@ -1,0 +1,108 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #bdbdbd;
+}
+.container {
+    --emojiSize: 150px;      /* creating CSS variable which can be used for further calculation */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    /* z-index: -1; */
+}
+.emoji {
+    background-color: #ffc83d;
+    width: var(--emojiSize);
+    height: var(--emojiSize);
+    border-radius: 50%;
+    margin: 20px;
+    overflow: hidden;
+    position: relative;     /* eyes can be positioned absolutely then */
+    z-index: 1;
+}
+.eyes {
+    position: absolute;
+    top: calc(var(--emojiSize)*.25);
+    left: calc(var(--emojiSize)*.5);
+}
+
+.eye {
+    position: absolute;
+    width: calc(var(--emojiSize)*.075);
+    height: calc(var(--emojiSize)*.15);
+    border-radius: 50%;
+    background-color: black;
+}
+.eyeLeft {
+    left: calc(var(--emojiSize)*-.2);
+}
+.eyeRight{
+    right: calc(var(--emojiSize)*-.2);
+}
+.smile {
+    --mouthHeight: calc(var(--emojiSize)*.3);
+
+    position: absolute;
+    background-color: black;
+    width: calc(var(--emojiSize)*.6);
+    height: var(--mouthHeight);
+    top: calc(var(--emojiSize)*.55);
+    left: calc(var(--emojiSize)*.5);
+    transform: translateX(-50%);
+    border-radius: 5% 5% var(--mouthHeight) var(--mouthHeight);
+}
+.openMouth {
+    position: absolute;
+    height: calc(var(--emojiSize)*.25);
+    width: calc(var(--emojiSize)*.2);
+    background-color: black;
+    border-radius: 50%;
+    top: calc(var(--emojiSize)*.55);
+    left: calc(var(--emojiSize)*.5);
+    transform: translateX(-50%);
+}
+.mask {
+    position: absolute;
+    background-color: white;
+    height: calc(var(--emojiSize)*.3);
+    width: calc(var(--emojiSize)*.5);
+    top: calc(var(--emojiSize)*.5);
+    left: calc(var(--emojiSize)*.25);
+    transform: none;
+    border: calc(var(--emojiSize)*.02) solid #999;
+    border-radius: 10%;
+}
+.strap {
+    position: absolute;
+    border: calc(var(--emojiSize)*.02) solid #999;
+    background-color: white;
+    width: calc(var(--emojiSize)*.5);
+    height: calc(var(--emojiSize)*.1);
+    z-index: -2;
+}
+.strap1 {
+    transform: rotate(20deg);
+    top: calc(var(--emojiSize)*-.05);
+    left: calc(var(--emojiSize)*-.4);
+}
+.strap2 {
+    transform: rotate(-20deg);
+    right: calc(var(--emojiSize)*-.4);
+    top: calc(var(--emojiSize)*-.05)
+}
+.strap3 {
+    transform: rotate(150deg);
+    bottom: calc(var(--emojiSize)*-.1);
+    left: calc(var(--emojiSize)*-.4);
+}
+.strap4 {
+    transform: rotate(-150deg);
+    bottom: calc(var(--emojiSize)*-.1);
+    right: calc(var(--emojiSize)*-.4);
+}
+
+/* z-index was not working if a transform property was applied on a class.*/
